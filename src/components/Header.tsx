@@ -2,8 +2,9 @@ import Head from "next/head";
 
 import Metadata from "@/libs/Metadata";
 import Navigation from "./navigation/Navigation";
+import Footer from "./footer/Footer";
 
-export default function Header({ metaData }: { metaData: Metadata }) {
+export default function Header({ children, metaData }: { children: any, metaData: Metadata }) {
   return (
     <div>
       <Head>
@@ -22,6 +23,8 @@ export default function Header({ metaData }: { metaData: Metadata }) {
       </Head>
 
       <Navigation />
+      {children}
+      <Footer />
     </div>
   );
 }
