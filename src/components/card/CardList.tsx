@@ -1,4 +1,5 @@
-import CardRepository from "../../libs/card/card.repository";
+import CardRepository from "@/libs/card/card.repository";
+import { getColsOfCards } from "@/utils/card.utils";
 import Card from "./Card";
 
 export default function CardList({
@@ -13,12 +14,14 @@ export default function CardList({
       <h1 className="p-8 text-white/80 font-medium text-3xl sm:text-4xl md:text-5xl">
         {title}
       </h1>
-      <div className="flex flex-col gap-8 px-8">
-        <div className="flex flex-wrap gap-8 mx-1">
-          {cards.map((card) => (
-            <Card key={card.name} card={card} />
-          ))}
-        </div>
+      <div
+        className={`grid grid-cols-2 lg:grid-cols-${getColsOfCards(
+          cards.length
+        )} gap-8 px-8`}
+      >
+        {cards.map((card) => (
+          <Card key={card.name} card={card} />
+        ))}
       </div>
     </div>
   );
