@@ -5,7 +5,7 @@ export default function Navigation() {
 
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-gray-700 p-6">
+      <nav className="flex items-center justify-between flex-wrap bg-primary p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           {/* <svg> Add the icon in svg. </svg> */}
           <span className="font-semibold text-xl tracking-tight">
@@ -32,7 +32,7 @@ export default function Navigation() {
             isOpen ? "" : "hidden"
           }`}
         >
-          <div className="text-sm lg:flex-grow">
+          <div className="text-white text-sm lg:flex-grow">
             <a
               href="/"
               className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
@@ -43,7 +43,7 @@ export default function Navigation() {
           <div>
             <a
               href="#"
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-400 hover:bg-white mt-4 lg:mt-0"
+              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-400 hover:bg-secondary mt-4 lg:mt-0"
             >
               Contactame
             </a>

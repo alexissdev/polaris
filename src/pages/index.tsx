@@ -6,7 +6,7 @@ import CardList from "@/components/card/CardList";
 
 export default function Home({ cards }: { cards: CardRepository[] }) {
   return (
-    <div className="bg-gray-400">
+    <div className="bg-secondary">
       <Header metaData={{ title: "Test", description: "", url: "" }}>
         <Container>
           <CardList cards={cards} />
