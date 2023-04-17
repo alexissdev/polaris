@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Script from "next/script";
 
 import Metadata from "@/libs/Metadata";
+import Navigation from "./navigation/Navigation";
 
 export default function Header({ metaData }: { metaData: Metadata }) {
   return (
@@ -21,7 +21,7 @@ export default function Header({ metaData }: { metaData: Metadata }) {
         <meta property="og:image" content="/favicon-1.jpg" />
       </Head>
 
-      <Script src="../path/to/flowbite/dist/flowbite.min.js" />
+      <Navigation />
     </div>
   );
 }
