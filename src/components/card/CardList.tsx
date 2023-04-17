@@ -14,7 +14,7 @@ export default function CardList({
         {title}
       </h1>
       <div className="flex flex-col gap-8 px-8">
-        <div className="flex flex-wrap -mx-1">
+        <div className="flex flex-wrap gap-8 mx-1">
           {cards.map((card) => (
             <Card key={card.name} card={card} />
           ))}

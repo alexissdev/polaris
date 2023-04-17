@@ -9,9 +9,7 @@ export default function Home({ cards }: { cards: CardRepository[] }) {
     <>
       <Header metaData={{ title: "Test", description: "", url: "" }} />
       <Container>
-        <div className="bg-gray-900">
-          <CardList cards={cards} title="Examples" />
-        </div>
+        <CardList cards={cards} />
       </Container>
     </>
   );
@@ -20,24 +18,28 @@ export default function Home({ cards }: { cards: CardRepository[] }) {
 export async function getStaticProps() {
   const cards: CardRepository[] = [
     {
-      name: "Test1",
-      description: "Test",
-      imageUrl: "https://picsum.photos/200/300",
+      name: "Apple Watch Series 6",
+      description: "The apple watch series 6 is good for your health",
+      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
+      price: 100,
     },
     {
-      name: "Test2",
-      description: "Test",
-      imageUrl: "https://picsum.photos/200/300",
+      name: "Apple Watch Series 6",
+      description: "The apple watch series 6 is good for your health",
+      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
+      price: 100,
     },
     {
-      name: "Test3",
-      description: "Test",
-      imageUrl: "https://picsum.photos/200/300",
+      name: "Apple Watch Series 6",
+      description: "The apple watch series 6 is good for your health",
+      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
+      price: 100,
     },
     {
-      name: "Test4",
-      description: "Test",
-      imageUrl: "https://picsum.photos/200/300",
+      name: "Apple Watch Series 6",
+      description: "The apple watch series 6 is good for your health",
+      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
+      price: 100,
     },
   ];
 
