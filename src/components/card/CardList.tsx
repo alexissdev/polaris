@@ -1,11 +1,11 @@
-import CardRepository from "@/libs/card/card.repository";
+import ProductRepository from "@/libs/product/product.repository";
 import ProductCard from "./ProductCard";
 
 export default function CardList({
-  cards,
+  products,
   title,
 }: {
-  cards: CardRepository[];
+  products: ProductRepository[];
   title?: string;
 }) {
   return (
@@ -14,8 +14,8 @@ export default function CardList({
         {title}
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 px-8">
-        {cards.map((card) => (
-          <ProductCard key={card.name} card={card} />
+        {products.map((product) => (
+          <ProductCard key={product.name} product={product} />
         ))}
       </div>
     </div>

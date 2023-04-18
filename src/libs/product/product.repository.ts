@@ -1,4 +1,4 @@
-export default interface CardRepository {
+export default interface ProductRepository {
   name: string;
   description: string;
   imageUrl: string;

@@ -1,15 +1,15 @@
-import CardRepository from "@/libs/card/card.repository";
+import ProductRepository from "@/libs/product/product.repository";
 
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import CardList from "@/components/card/CardList";
 
-export default function Home({ cards }: { cards: CardRepository[] }) {
+export default function Home({ products }: { products: ProductRepository[] }) {
   return (
     <div className="bg-secondary">
       <Header metaData={{ title: "Test", description: "", url: "" }}>
         <Container>
-          <CardList cards={cards} />
+          <CardList products={products} />
         </Container>
       </Header>
     </div>
@@ -17,7 +17,7 @@ export default function Home({ cards }: { cards: CardRepository[] }) {
 }
 
 export async function getStaticProps() {
-  const cards: CardRepository[] = [
+  const products: ProductRepository[] = [
     {
       name: "Apple Watch Series 6",
       description: "The apple watch series 6 is good for your health",
@@ -58,7 +58,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      cards,
+      products,
     },
   };
 }
