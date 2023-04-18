@@ -1,5 +1,5 @@
 import CardRepository from "@/libs/card/card.repository";
-import Card from "./Card";
+import ProductCard from "./ProductCard";
 
 export default function CardList({
   cards,
@@ -15,7 +15,7 @@ export default function CardList({
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 px-8">
         {cards.map((card) => (
-          <Card key={card.name} card={card} />
+          <ProductCard key={card.name} card={card} />
         ))}
       </div>
     </div>

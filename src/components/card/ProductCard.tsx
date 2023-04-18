@@ -1,6 +1,6 @@
 import CardRepository from "../../libs/card/card.repository";
 
-export default function Card({ card }: { card: CardRepository }) {
+export default function ProductCard({ card }: { card: CardRepository }) {
   return (
     <div className="w-full max-w-sm rounded-lg shadow bg-primary border-gray-700">
       <a href="#">
