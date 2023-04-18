@@ -1,5 +1,4 @@
 import CardRepository from "@/libs/card/card.repository";
-import { getColsOfCards } from "@/utils/card.utils";
 import Card from "./Card";
 
 export default function CardList({
@@ -15,9 +14,7 @@ export default function CardList({
         {title}
       </h1>
       <div
-        className={`grid grid-cols-2 lg:grid-cols-${getColsOfCards(
-          cards.length
-        )} gap-8 px-8`}
+        className="grid grid-cols-2 lg:grid-cols-3 gap-8 px-8"
       >
         {cards.map((card) => (
           <Card key={card.name} card={card} />
