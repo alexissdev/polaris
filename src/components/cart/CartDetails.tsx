@@ -6,12 +6,12 @@ export default function CartDetails({
   cart: CartProductRepository[];
 }) {
   return (
-    <div className="absolute mt-8 shadow-sm rounded-md w-80 right-0">
+    <div className="absolute left-1 lg:left-[83%] mt-8 shadow-sm rounded-lg w-80">
       <ul className="m-o p-0">
         {cart.map((product) => (
           <li
             key={product.name}
-            className="flex justify-between items-center py-6 px-5 rounded-sm bg-primary list-none text-white"
+            className="flex justify-between items-center py-6 px-5 rounded-2xl bg-primary list-none text-white"
           >
             <img
               src={product.imageUrl}
