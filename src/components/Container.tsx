@@ -1,6 +1,6 @@
-export default function Container({ children}: { children: any}) {
+export default function Container({ children, className }: { children: any, className?: string}) {
   return (
-    <div className="container mx-auto px-4">
+    <div className={`container mx-auto px-4 ${className}`}>
       {children}
     </div>
   );

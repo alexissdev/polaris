@@ -25,7 +25,7 @@ export default function Home({ products }: { products: ProductRepository[] }) {
     <div className="bg-secondary">
       <Header metaData={{ title: "Test", description: "", url: "" }} />
       <Navigation cart={cart} viewCart={viewCart} toggleCart={toggleCart} />
-      <Container>
+      <Container className="footer-container">
         <CardList addToCart={addToCart} products={products} />
       </Container>
       <Footer />
