@@ -20,36 +20,42 @@ export async function getStaticProps() {
   const products: ProductRepository[] = [
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,
     },
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,
     },
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,
     },
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,
     },
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,
     },
     {
       name: "Apple Watch Series 6",
+      shortDescription: "The apple watch series 6 is good for your health",
       description: "The apple watch series 6 is good for your health",
       imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
       price: 100,

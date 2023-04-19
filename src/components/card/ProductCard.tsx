@@ -16,7 +16,7 @@ export default function ProductCard({ product }: { product: ProductRepository })
             {product.name}
           </h5>
         </a>
-        <p className="mt-2 text-gray-400">{product.description}</p>
+        <p className="mt-2 text-gray-400">{product.shortDescription}</p>
         <br />
         <div className="flex items-center justify-between">
           <span className="text-3xl font-bold text-white">${product.price}</span>
