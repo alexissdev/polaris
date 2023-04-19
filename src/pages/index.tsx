@@ -34,29 +34,24 @@ export default function Home({ products }: { products: ProductRepository[] }) {
 }
 
 export async function getStaticProps() {
-  const products: ProductRepository[] = [
-    {
-      name: "Apple Watch Series 6",
-      shortDescription: "The apple watch series 6 is good for your health",
-      description: "The apple watch series 6 is good for your health",
-      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
-      price: 100,
-    },
-    {
-      name: "Apple Watch Series 6",
-      shortDescription: "The apple watch series 6 is good for your health",
-      description: "The apple watch series 6 is good for your health",
-      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
-      price: 100,
-    },
-    {
-      name: "Apple Watch Series 6",
-      shortDescription: "The apple watch series 6 is good for your health",
-      description: "The apple watch series 6 is good for your health",
-      imageUrl: "https://flowbite.com/docs/images/products/apple-watch.png",
-      price: 100,
-    },
-  ];
+  const products: ProductRepository[] = [];
+  const response: any = await fetch("https://fakestoreapi.com/products").then((result) => result.json());
+  let i: number = 0;
+
+  for (const product of response) {
+    if (i === 6) {
+      break;
+    }
+
+    i++;
+    products.push({
+      name: product.title,
+      shortDescription: product.description,
+      description: product.description,
+      imageUrl: product.image,
+      price: product.price,
+    });
+  }
 
   return {
     props: {
