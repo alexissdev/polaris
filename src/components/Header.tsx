@@ -1,10 +1,7 @@
 import Head from "next/head";
-
 import Metadata from "@/libs/Metadata";
-import Navigation from "./navigation/Navigation";
-import Footer from "./footer/Footer";
 
-export default function Header({ children, metaData }: { children: any, metaData: Metadata }) {
+export default function Header({ metaData }: { metaData: Metadata }) {
   return (
     <div>
       <Head>
@@ -21,10 +18,6 @@ export default function Header({ children, metaData }: { children: any, metaData
         <meta property="og:description" content={metaData.description} />
         <meta property="og:image" content="/favicon-1.jpg" />
       </Head>
-
-      <Navigation />
-      {children}
-      <Footer />
     </div>
   );
 }
