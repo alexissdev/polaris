@@ -1,5 +1,4 @@
 import CartProductRepository from "@/libs/product/cart.product.repository";
-
 import BubbleAlert from "@/components/alert/BubbleAlert";
 import CartDetails from "@/components/cart/CartDetails";
 
@@ -12,7 +11,10 @@ export default function Cart({
   viewCart: boolean;
   toggleCart: () => void;
 }) {
-  const amount = cart.reduce((acc, product) => acc + product.amount, 0);
+  const amount: number = cart.reduce(
+    (acc: number, product: CartProductRepository) => acc + product.amount,
+    0
+  );
 
   return (
     <div>
