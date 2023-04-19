@@ -1,3 +1,5 @@
+import config from "@/libs/config/config";
+
 import useNavigationOpen from "@/hooks/useNavigationOpen";
 import CartProductRepository from "@/libs/product/cart.product.repository";
 import Cart from "@/components/cart/Cart";
@@ -19,7 +21,7 @@ export default function Navigation({
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           {/* <svg> Add the icon in svg. </svg> */}
           <span className="font-semibold text-xl tracking-tight">
-            Viniferous Store
+            {config.information.companyName}
           </span>
         </div>
         <div className="block lg:hidden">

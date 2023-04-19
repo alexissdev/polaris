@@ -1,5 +1,12 @@
+import { config } from "dotenv";
+config();
+
 export default {
   api: {
-    url: "https://www.alexissdev.me/api",
+    url: process.env.API_URL,
+  },
+  information: {
+    companyName: process.env.COMPANY_NAME,
+    companyDescription: process.env.COMPANY_DESCRIPTION,
   },
 };
