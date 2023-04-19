@@ -11,7 +11,7 @@ export default function CartDetails({
         {cart.map((product) => (
           <li
             key={product.name}
-            className="flex justify-between items-center py-6 px-5 rounded-sm bg-black list-none text-white"
+            className="flex justify-between items-center py-6 px-5 rounded-sm bg-primary list-none text-white"
           >
             <img
               src={product.imageUrl}
