@@ -1,6 +1,16 @@
 import useNavigationOpen from "@/hooks/useNavigationOpen";
+import CartProductRepository from "@/libs/product/cart.product.repository";
+import Cart from "@/components/cart/Cart";
 
-export default function Navigation() {
+export default function Navigation({
+  cart,
+  viewCart,
+  toggleCart,
+}: {
+  cart: CartProductRepository[];
+  viewCart: boolean;
+  toggleCart: () => void;
+}) {
   const { isOpen, toggleOpen } = useNavigationOpen();
 
   return (
@@ -41,12 +51,7 @@ export default function Navigation() {
             </a>
           </div>
           <div>
-            <a
-              href="#"
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-400 hover:bg-secondary mt-4 lg:mt-0"
-            >
-              Contactame
-            </a>
+            <Cart cart={cart} viewCart={viewCart} toggleCart={toggleCart} />
           </div>
         </div>
       </nav>
