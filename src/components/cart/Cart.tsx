@@ -28,7 +28,7 @@ export default function Cart({
       >
         {
           <img
-            src="/images/cart.svg"
+            src="/cart.png"
             alt="cart"
             className="border-0 w-16 h-16 align-middle"
           />

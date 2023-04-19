@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CartProductRepository from "@/libs/product/cart.product.repository";
 
 export default function CartDetails({
@@ -14,7 +13,7 @@ export default function CartDetails({
             key={product.name}
             className="flex justify-between items-center py-6 px-5 rounded-sm bg-black list-none text-white"
           >
-            <Image
+            <img
               src={product.imageUrl}
               alt={product.name}
               width={50}

@@ -26,7 +26,7 @@ export default function Home({ products }: { products: ProductRepository[] }) {
       <Header metaData={{ title: "Test", description: "", url: "" }} />
       <Navigation cart={cart} viewCart={viewCart} toggleCart={toggleCart} />
       <Container>
-        <CardList products={products} />
+        <CardList addToCart={addToCart} products={products} />
       </Container>
       <Footer />
     </div>
