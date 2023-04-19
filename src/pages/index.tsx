@@ -35,15 +35,10 @@ export default function Home({ products }: { products: ProductRepository[] }) {
 
 export async function getStaticProps() {
   const products: ProductRepository[] = [];
-  const response: any = await fetch("https://fakestoreapi.com/products").then((result) => result.json());
-  let i: number = 0;
+  const response: any = await fetch("https://fakestoreapi.com/products")
+  .then((result) => result.json());
 
   for (const product of response) {
-    if (i === 6) {
-      break;
-    }
-
-    i++;
     products.push({
       name: product.title,
       shortDescription: product.description,

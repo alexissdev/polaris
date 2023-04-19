@@ -12,7 +12,7 @@ export default function CardList({
   addToCart: (product: CartProductRepository) => void;
 }) {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className=" mx-auto">
       <h1 className="p-8 text-white/80 font-medium text-3xl sm:text-4xl md:text-5xl">
         {title}
       </h1>
